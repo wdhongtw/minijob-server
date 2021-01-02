@@ -1,3 +1,10 @@
+## Patterns for current projecrt
+
+openapi.json
+
+
+## Common ignore patterns for Python
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
