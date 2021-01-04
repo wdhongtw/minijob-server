@@ -22,3 +22,14 @@ class ItemId(BaseModel):
     """The item ID model."""
 
     item_id: str
+
+class ItemMeta(ItemId):
+    """The item metadata model."""
+
+    length: int
+    
+    # seconds since the epoch
+    timestamp: int
+
+class ItemDetail(ItemMeta, Item):
+    """The item detail model."""
