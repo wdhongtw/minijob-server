@@ -47,3 +47,31 @@ async def create_item(item: model.Item):
     )
 
     return model.ItemId(item_id=item_id)
+
+
+"""
+stateDiagram-v2
+    [*] --> Created: By user, post new job
+    Created --> Started: By worker, receive job
+    Created --> Expired: By server, check job age
+    Started --> Expired: By server, check job age
+    Started --> Finished: By worker, success or fail
+    Finished --> [*]: By user, clean up job
+    Expired --> [*]: By user, clean up job
+"""
+
+
+# @app.post("/jobs/")
+
+# Get all details about job, including job_id and state
+# @app.get("/jobs/{job_id})
+
+# Update job state and upload job resources and artifacts
+# @app.patch("/jobs/{job_id}")
+
+
+
+# Delete the job
+# @app.delete("/jobs/{job_id}")
+
+# @app.get("/suitable_jobs")
